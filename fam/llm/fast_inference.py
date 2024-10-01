@@ -99,8 +99,7 @@ class TTS:
             checkpoint_path=Path(self._first_stage_ckpt),
             spk_emb_ckpt_path=Path(f"{self._model_dir}/speaker_encoder.pt"),
             device=self._device,
-            compile=True,
-            compile_prefill=True,
+            compile=False,
             quantisation_mode=quantisation_mode,
         )
         self._seed = seed
